@@ -700,7 +700,12 @@ function Careers() {
 }
 
 function Partners() {
-  const partners = ["CoinNewsExtra","CoinNewsExtraTv","Nigeria Blockchain & AI Week","Africa Blockchain Festival","Fintech Association of Nigeria","Africa Fintech Network","United Africa Blockchain Association"];
+  const partners = [
+    { name: "CoinNewsExtra", logo: partnerCNE },
+    { name: "Nigeria Blockchain & AI Week", logo: partnerNBA },
+    { name: "FinTechNGR", logo: partnerFintech },
+    { name: "United Africa Blockchain Association", logo: partnerUABA },
+  ];
   return (
     <section className="py-24 relative">
       <div className="mx-auto max-w-7xl px-4">
@@ -711,11 +716,11 @@ function Partners() {
             <p className="mt-4 text-muted-foreground">Building with global and local fintech, AI, blockchain and technology organizations.</p>
           </div>
         </Reveal>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-          {partners.map((p,i)=>(
-            <Reveal key={p} delay={i*50}>
-              <div className="glass-strong rounded-2xl px-4 py-6 text-center text-sm font-semibold gradient-border hover:bg-white/5 transition">
-                {p}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          {partners.map((p, i) => (
+            <Reveal key={p.name} delay={i * 60}>
+              <div className="glass-strong rounded-2xl p-6 h-36 sm:h-40 flex items-center justify-center gradient-border hover:bg-white/5 transition group">
+                <img src={p.logo} alt={p.name} loading="lazy" className="max-h-full max-w-full object-contain transition group-hover:scale-105" />
               </div>
             </Reveal>
           ))}
