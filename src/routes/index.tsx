@@ -19,6 +19,10 @@ import appProfile from "@/assets/app-profile.jpg";
 import appStaking from "@/assets/app-staking.jpg";
 import appProgress from "@/assets/app-progress.jpg";
 import appSupport from "@/assets/app-support.jpg";
+import partnerCNE from "@/assets/partner-cne.png";
+import partnerUABA from "@/assets/partner-uaba.jpg";
+import partnerNBA from "@/assets/partner-nbaweek.jpg";
+import partnerFintech from "@/assets/partner-fintechngr.jpg";
 
 export const Route = createFileRoute("/")({ component: Landing });
 
@@ -382,13 +386,19 @@ function Programs() {
             <div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full glass text-xs mb-4"><BookOpen className="w-3.5 h-3.5 text-primary" /> Programs</div>
               <h2 className="text-3xl sm:text-5xl font-bold">Future-Focused <span className="text-gradient">Programs</span></h2>
-              <p className="mt-3 text-muted-foreground max-w-2xl">Diplomas, cohorts, masterclasses & bootcamps — all blockchain-certified.</p>
+              <p className="mt-3 text-muted-foreground max-w-2xl">AI and Blockchain powered diplomas, cohorts, masterclasses & bootcamps — all blockchain-certified.</p>
             </div>
             <div className="flex flex-wrap gap-2">
               {(["All","AI/Tech","Web3","Trading","Business"] as const).map((t) => (
                 <button key={t} onClick={() => setTab(t)} className={`px-4 py-2 rounded-xl text-sm font-medium transition ${tab===t?"bg-[var(--gradient-primary)] text-white glow-primary":"glass hover:bg-white/10"}`}>{t}</button>
               ))}
             </div>
+          </div>
+        </Reveal>
+        <Reveal>
+          <div className="mb-8 glass-strong rounded-2xl p-4 sm:p-5 flex flex-wrap items-center gap-3 justify-center text-center gradient-border">
+            <div className="w-10 h-10 rounded-xl bg-[var(--gradient-primary)] grid place-items-center glow-primary shrink-0"><Smartphone className="w-5 h-5 text-white" /></div>
+            <div className="text-sm sm:text-base"><span className="font-semibold">Classes & registrations are done only on our Mobile App.</span> <span className="text-muted-foreground">Web app coming soon.</span></div>
           </div>
         </Reveal>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -405,15 +415,14 @@ function Programs() {
                 <h3 className="relative mt-4 font-bold text-lg leading-tight">{p.t}</h3>
                 <div className="relative mt-1 text-xs text-muted-foreground">{p.lvl} • {p.dur}</div>
                 <div className="relative mt-4 flex items-center justify-between text-xs">
-                  <span className="text-muted-foreground">Instructor: <span className="text-foreground/90">{p.inst}</span></span>
+                  <span className="inline-flex items-center gap-1 text-accent font-semibold"><Brain className="w-3 h-3" /> AI & Blockchain Powered</span>
                   <span className="inline-flex items-center gap-1 text-gold font-semibold"><Shield className="w-3 h-3" /> On-chain</span>
                 </div>
                 <div className="relative mt-4 pt-4 border-t border-white/5 flex items-center justify-between">
-                  <div>
-                    <div className="text-xs text-muted-foreground">Tuition</div>
-                    <div className="font-bold">{p.fee}</div>
+                  <div className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
+                    <Smartphone className="w-3.5 h-3.5 text-primary" /> Mobile App Only
                   </div>
-                  <a href="#cta" className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-accent transition">Enroll <ArrowRight className="w-4 h-4" /></a>
+                  <a href="#app" className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-accent transition">Enroll <ArrowRight className="w-4 h-4" /></a>
                 </div>
               </div>
             </Reveal>
@@ -691,7 +700,12 @@ function Careers() {
 }
 
 function Partners() {
-  const partners = ["CoinNewsExtra","CoinNewsExtraTv","Nigeria Blockchain & AI Week","Africa Blockchain Festival","Fintech Association of Nigeria","Africa Fintech Network","United Africa Blockchain Association"];
+  const partners = [
+    { name: "CoinNewsExtra", logo: partnerCNE },
+    { name: "Nigeria Blockchain & AI Week", logo: partnerNBA },
+    { name: "FinTechNGR", logo: partnerFintech },
+    { name: "United Africa Blockchain Association", logo: partnerUABA },
+  ];
   return (
     <section className="py-24 relative">
       <div className="mx-auto max-w-7xl px-4">
@@ -702,11 +716,11 @@ function Partners() {
             <p className="mt-4 text-muted-foreground">Building with global and local fintech, AI, blockchain and technology organizations.</p>
           </div>
         </Reveal>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-          {partners.map((p,i)=>(
-            <Reveal key={p} delay={i*50}>
-              <div className="glass-strong rounded-2xl px-4 py-6 text-center text-sm font-semibold gradient-border hover:bg-white/5 transition">
-                {p}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          {partners.map((p, i) => (
+            <Reveal key={p.name} delay={i * 60}>
+              <div className="glass-strong rounded-2xl p-6 h-36 sm:h-40 flex items-center justify-center gradient-border hover:bg-white/5 transition group">
+                <img src={p.logo} alt={p.name} loading="lazy" className="max-h-full max-w-full object-contain transition group-hover:scale-105" />
               </div>
             </Reveal>
           ))}
@@ -760,16 +774,18 @@ function AppShowcase() {
 }
 
 const FAQS = [
-  ["What is Emtech School?","Emtech School is a blockchain-powered online university focused on AI, Blockchain, Fintech, Trading and emerging technology education."],
-  ["How long does each diploma cohort last?","Each cohort runs for 3 months with weekly live online classes."],
-  ["Are certificates blockchain verified?","Yes. Certificates and academic records are securely stored and verified on blockchain."],
-  ["Can students pay with cryptocurrency?","Yes. Students can pay with fiat or cryptocurrency and receive a 10% discount for crypto payments."],
-  ["What is EMC Token?","EMC is the utility token powering rewards, tuition payments, staking and incentives within the ecosystem."],
-  ["Are students rewarded for learning?","Yes. Students earn EMC rewards for participation, grades and graduation performance."],
-  ["Are there live classes?","Yes. Students attend weekly live online sessions with lecturers and mentors."],
+  ["What is Emtech School?","Emtech School is an AI and Blockchain powered online university focused on AI, Blockchain, Fintech, Trading and emerging technology education for Africa's future workforce."],
+  ["Is Emtech School really AI and Blockchain powered?","Yes. Every course is delivered with an AI tutor that personalizes your learning, and every certificate, transcript and reward is secured on blockchain — making Emtech a true AI and Blockchain powered university."],
+  ["How do I register and attend classes?","Classes and registrations are done only on our Mobile App. The web app is coming soon — for now, download the Emtech School app to apply, enroll and attend live cohorts."],
+  ["How long does each diploma cohort last?","Each AI and Blockchain powered cohort runs for 3 months with weekly live online classes inside the mobile app."],
+  ["Are certificates blockchain verified?","Yes. Certificates and academic records are securely stored and verified on blockchain — tamper-proof and globally verifiable."],
+  ["Can students pay with cryptocurrency?","Yes. Students can pay with fiat or cryptocurrency and receive a 10% discount when paying with crypto."],
+  ["What is EMC Token?","EMC is the utility token powering rewards, tuition payments, staking and incentives within the AI and Blockchain powered Emtech ecosystem."],
+  ["Are students rewarded for learning?","Yes. Students earn EMC rewards for participation, grades and graduation performance — our Learn-to-Earn model."],
+  ["Are there live classes?","Yes. Students attend weekly live online sessions with lecturers and mentors — all delivered through the mobile app."],
   ["Does Emtech School help students get jobs?","Yes. We are building partnerships with fintech, AI and blockchain companies to support internships and talent placement."],
-  ["Is Emtech School mobile-friendly?","Yes. The platform is fully optimized for both mobile and desktop learning."],
-  ["Is Emtech School global?","Yes. Students can learn from anywhere in the world."],
+  ["Is Emtech School mobile-friendly?","Emtech School is mobile-first. All learning, registration and live classes happen inside the mobile app. The web app is coming soon."],
+  ["Is Emtech School global?","Yes. Students can learn from anywhere in the world through our AI and Blockchain powered platform."],
 ];
 
 function FAQ() {
