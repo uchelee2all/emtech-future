@@ -19,6 +19,10 @@ import appProfile from "@/assets/app-profile.jpg";
 import appStaking from "@/assets/app-staking.jpg";
 import appProgress from "@/assets/app-progress.jpg";
 import appSupport from "@/assets/app-support.jpg";
+import partnerCNE from "@/assets/partner-cne.png";
+import partnerUABA from "@/assets/partner-uaba.jpg";
+import partnerNBA from "@/assets/partner-nbaweek.jpg";
+import partnerFintech from "@/assets/partner-fintechngr.jpg";
 
 export const Route = createFileRoute("/")({ component: Landing });
 
