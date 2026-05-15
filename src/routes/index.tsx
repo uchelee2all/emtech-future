@@ -395,6 +395,12 @@ function Programs() {
             </div>
           </div>
         </Reveal>
+        <Reveal>
+          <div className="mb-8 glass-strong rounded-2xl p-4 sm:p-5 flex flex-wrap items-center gap-3 justify-center text-center gradient-border">
+            <div className="w-10 h-10 rounded-xl bg-[var(--gradient-primary)] grid place-items-center glow-primary shrink-0"><Smartphone className="w-5 h-5 text-white" /></div>
+            <div className="text-sm sm:text-base"><span className="font-semibold">Classes & registrations are done only on our Mobile App.</span> <span className="text-muted-foreground">Web app coming soon.</span></div>
+          </div>
+        </Reveal>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {PROGRAMS.filter(filt[tab]).map((p, i) => (
             <Reveal key={p.t} delay={(i % 6) * 60}>
