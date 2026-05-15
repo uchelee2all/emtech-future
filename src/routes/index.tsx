@@ -409,15 +409,14 @@ function Programs() {
                 <h3 className="relative mt-4 font-bold text-lg leading-tight">{p.t}</h3>
                 <div className="relative mt-1 text-xs text-muted-foreground">{p.lvl} • {p.dur}</div>
                 <div className="relative mt-4 flex items-center justify-between text-xs">
-                  <span className="text-muted-foreground">Instructor: <span className="text-foreground/90">{p.inst}</span></span>
+                  <span className="inline-flex items-center gap-1 text-accent font-semibold"><Brain className="w-3 h-3" /> AI & Blockchain Powered</span>
                   <span className="inline-flex items-center gap-1 text-gold font-semibold"><Shield className="w-3 h-3" /> On-chain</span>
                 </div>
                 <div className="relative mt-4 pt-4 border-t border-white/5 flex items-center justify-between">
-                  <div>
-                    <div className="text-xs text-muted-foreground">Tuition</div>
-                    <div className="font-bold">{p.fee}</div>
+                  <div className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
+                    <Smartphone className="w-3.5 h-3.5 text-primary" /> Mobile App Only
                   </div>
-                  <a href="#cta" className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-accent transition">Enroll <ArrowRight className="w-4 h-4" /></a>
+                  <a href="#app" className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-accent transition">Enroll <ArrowRight className="w-4 h-4" /></a>
                 </div>
               </div>
             </Reveal>
