@@ -774,16 +774,18 @@ function AppShowcase() {
 }
 
 const FAQS = [
-  ["What is Emtech School?","Emtech School is a blockchain-powered online university focused on AI, Blockchain, Fintech, Trading and emerging technology education."],
-  ["How long does each diploma cohort last?","Each cohort runs for 3 months with weekly live online classes."],
-  ["Are certificates blockchain verified?","Yes. Certificates and academic records are securely stored and verified on blockchain."],
-  ["Can students pay with cryptocurrency?","Yes. Students can pay with fiat or cryptocurrency and receive a 10% discount for crypto payments."],
-  ["What is EMC Token?","EMC is the utility token powering rewards, tuition payments, staking and incentives within the ecosystem."],
-  ["Are students rewarded for learning?","Yes. Students earn EMC rewards for participation, grades and graduation performance."],
-  ["Are there live classes?","Yes. Students attend weekly live online sessions with lecturers and mentors."],
+  ["What is Emtech School?","Emtech School is an AI and Blockchain powered online university focused on AI, Blockchain, Fintech, Trading and emerging technology education for Africa's future workforce."],
+  ["Is Emtech School really AI and Blockchain powered?","Yes. Every course is delivered with an AI tutor that personalizes your learning, and every certificate, transcript and reward is secured on blockchain — making Emtech a true AI and Blockchain powered university."],
+  ["How do I register and attend classes?","Classes and registrations are done only on our Mobile App. The web app is coming soon — for now, download the Emtech School app to apply, enroll and attend live cohorts."],
+  ["How long does each diploma cohort last?","Each AI and Blockchain powered cohort runs for 3 months with weekly live online classes inside the mobile app."],
+  ["Are certificates blockchain verified?","Yes. Certificates and academic records are securely stored and verified on blockchain — tamper-proof and globally verifiable."],
+  ["Can students pay with cryptocurrency?","Yes. Students can pay with fiat or cryptocurrency and receive a 10% discount when paying with crypto."],
+  ["What is EMC Token?","EMC is the utility token powering rewards, tuition payments, staking and incentives within the AI and Blockchain powered Emtech ecosystem."],
+  ["Are students rewarded for learning?","Yes. Students earn EMC rewards for participation, grades and graduation performance — our Learn-to-Earn model."],
+  ["Are there live classes?","Yes. Students attend weekly live online sessions with lecturers and mentors — all delivered through the mobile app."],
   ["Does Emtech School help students get jobs?","Yes. We are building partnerships with fintech, AI and blockchain companies to support internships and talent placement."],
-  ["Is Emtech School mobile-friendly?","Yes. The platform is fully optimized for both mobile and desktop learning."],
-  ["Is Emtech School global?","Yes. Students can learn from anywhere in the world."],
+  ["Is Emtech School mobile-friendly?","Emtech School is mobile-first. All learning, registration and live classes happen inside the mobile app. The web app is coming soon."],
+  ["Is Emtech School global?","Yes. Students can learn from anywhere in the world through our AI and Blockchain powered platform."],
 ];
 
 function FAQ() {
