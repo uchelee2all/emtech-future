@@ -386,7 +386,7 @@ function Programs() {
             <div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full glass text-xs mb-4"><BookOpen className="w-3.5 h-3.5 text-primary" /> Programs</div>
               <h2 className="text-3xl sm:text-5xl font-bold">Future-Focused <span className="text-gradient">Programs</span></h2>
-              <p className="mt-3 text-muted-foreground max-w-2xl">Diplomas, cohorts, masterclasses & bootcamps — all blockchain-certified.</p>
+              <p className="mt-3 text-muted-foreground max-w-2xl">AI and Blockchain powered diplomas, cohorts, masterclasses & bootcamps — all blockchain-certified.</p>
             </div>
             <div className="flex flex-wrap gap-2">
               {(["All","AI/Tech","Web3","Trading","Business"] as const).map((t) => (
