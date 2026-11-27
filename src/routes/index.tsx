@@ -56,7 +56,7 @@ function Nav() {
             </div>
             <div className="leading-tight">
               <div className="text-sm font-bold tracking-tight">EMTECH <span className="text-gradient">SCHOOL</span></div>
-              <div className="text-[10px] text-muted-foreground">A CoinNewsExtra Product</div>
+              <div className="text-[10px] text-muted-foreground">A WeSpot Africa Product</div>
             </div>
           </a>
           <nav className="hidden lg:flex items-center gap-1">
@@ -111,7 +111,7 @@ function Hero() {
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-medium mb-6">
               <Sparkles className="w-3.5 h-3.5 text-[var(--gold)]" />
               <span>A Product of</span>
-              <span className="text-gold font-semibold">CoinNewsExtra</span>
+              <span className="text-gold font-semibold">WeSpot Africa</span>
             </div>
           </Reveal>
           <Reveal delay={100}>
@@ -215,7 +215,7 @@ function PoweredBy() {
         <Reveal>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full glass text-xs mb-4"><Sparkles className="w-3.5 h-3.5 text-gold" /> The Ecosystem</div>
-            <h2 className="text-3xl sm:text-5xl font-bold">A Product of <span className="text-gold">CoinNewsExtra</span></h2>
+            <h2 className="text-3xl sm:text-5xl font-bold">A Product of <span className="text-gold">WeSpot Africa</span></h2>
             <p className="mt-4 text-muted-foreground">Africa's leading Blockchain, AI, Crypto and Fintech media ecosystem — focused on innovation, education and digital adoption across the continent.</p>
           </div>
         </Reveal>
