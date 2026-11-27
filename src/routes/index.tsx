@@ -888,7 +888,7 @@ function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <div>© {new Date().getFullYear()} Emtech School. A Product of CoinNewsExtra. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} Emtech School. A Product of WeSpot Africa Limited. All rights reserved.</div>
           <div className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" /> Built for Africa's future workforce</div>
         </div>
       </div>
